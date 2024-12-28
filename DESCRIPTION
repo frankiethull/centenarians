@@ -1,0 +1,13 @@
+Package: centenarians
+Title: Verified Oldest People
+Version: 0.0.100
+Authors@R: 
+    person("Frank", "Hull", , "frankiethull@gmail.com", role = c("aut", "cre"))
+Description: This package contains a dataset of the verified oldest people that have ever lived. Contains verifiable centenarians and supercentenarians, a staticly updated mirror of https://en.wikipedia.org/wiki/List_of_the_verified_oldest_people.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends: 
+    R (>= 3.5)
+LazyData: true

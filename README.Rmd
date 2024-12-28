@@ -1,0 +1,61 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# centenarians
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of centenarians is to provide centenarian and supercentenarian data in R.
+
+
+## Installation
+
+You can install the development version of centenarians from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("frankiethull/centenarians")
+```
+
+## Example Data Visualization
+
+This is a basic example showing the package underlying dataset.
+
+```{r example}
+library(centenarians)
+library(ggplot2)
+
+centenarians_data |>
+  ggplot() +
+   geom_point(aes(x = birth_date, y = age, color = place_of_death_or_residence), 
+              size = 5, alpha = .7) + 
+  scale_color_viridis_d(option = "F", begin = .01, end = .7) +
+facet_wrap(~gender) + 
+  labs(
+    title = "Oldest Verified People",
+    subtitle = "a breakdown by gender & country",
+    x = "Birth Date",
+    y = "Age"
+  ) + 
+  theme_minimal()
+
+```
+
+
+```{r}
+str(centenarians_data)
+```
+
